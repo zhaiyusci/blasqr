@@ -15,6 +15,7 @@
 \newcommand{\key}[1]{\underline{\texttt{#1}}}
 \begin{document}
 	\pagestyle{empty}
+	\centering
 	
 	\rotatebox[origin=c]{90}{\huge\textbf{B}asic \textbf{L}inear \textbf{A}lgebra \textbf{S}ubprograms (BLAS) --- A Quick Reference Guide}	
 	\hspace{0.5cm}
@@ -73,7 +74,7 @@
 		\verb|xHEMM ( SIDE, UPLO,                      M, N,    ALPHA, A, LDA, B, LDB, BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{B}                                 + \beta \vb{C} $, $\vb{C} \gets \alpha  \vb{B}   \vb{A}                                 + \beta \vb{C} $,                        $\vb{C} - m \times n$, $\vb{A}=\vb{A}^{\H}$           & C, Z               \\
 		\verb|xSYRK (       UPLO, TRANS,                  N, K, ALPHA, A, LDA,         BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{A}^{\T}                               + \beta \vb{C} $, $\vb{C} \gets \alpha  \vb{A}^{\T} \vb{A}                                 + \beta \vb{C} $,                        $\vb{C} - n \times n$                           & S, D, C, Z         \\
 		\verb|xHERK (       UPLO, TRANS,                  N, K, ALPHA, A, LDA,         BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{A}^{\H}                               + \beta \vb{C} $, $\vb{C} \gets \alpha  \vb{A}^{\H} \vb{A}                                 + \beta \vb{C} $,                        $\vb{C} - n \times n$                           & C, Z               \\
-		\verb|xSYR2K(       UPLO, TRANS,                  N, K, ALPHA, A, LDA, B, LDB, BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{B}^{\T}      +   \bar{\alpha} \vb{B} \vb{A}^{\T}   + \beta \vb{C} $, $\vb{C} \gets \alpha \vb{A}^{\T}    \vb{B}      +   \bar{\alpha} \vb{B}^{\T} \vb{A}   + \beta \vb{C} $,                        $\vb{C} - n \times n$ & S, D, C, Z         \\
+		\verb|xSYR2K(       UPLO, TRANS,                  N, K, ALPHA, A, LDA, B, LDB, BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{B}^{\T}      +       {\alpha} \vb{B} \vb{A}^{\T}   + \beta \vb{C} $, $\vb{C} \gets \alpha \vb{A}^{\T}    \vb{B}      +       {\alpha} \vb{B}^{\T} \vb{A}   + \beta \vb{C} $,                        $\vb{C} - n \times n$ & S, D, C, Z         \\
 		\verb|xHER2K(       UPLO, TRANS,                  N, K, ALPHA, A, LDA, B, LDB, BETA,  C, LDC ) | & $\vb{C} \gets \alpha \vb{A}    \vb{B}^{\H}      +   \bar{\alpha} \vb{B} \vb{A}^{\H}   + \beta \vb{C} $, $\vb{C} \gets \alpha \vb{A}^{\H}    \vb{B}      +   \bar{\alpha} \vb{B}^{\H} \vb{A}   + \beta \vb{C} $,                        $\vb{C} - n \times n$ & C, Z               \\
 		\verb|xTRMM ( SIDE, UPLO, TRANSA,        DIAG, M, N,    ALPHA, A, LDA, B, LDB )                | & $\vb{B} \gets \alpha \op(\vb{A})\vb{B}                                           $, $\vb{B} \gets \alpha \vb{B} \op(\vb{A})                                          $, $\op(\vb{A}) = \vb{A}, \vb{A}^{\T}, \vb{A}^{\H}$, $\vb{B} - m \times n$              & S, D, C, Z         \\
 		\verb|xTRSM ( SIDE, UPLO, TRANSA,        DIAG, M, N,    ALPHA, A, LDA, B, LDB )                | & $\vb{B} \gets \alpha \op(\vb{A}^{-1}) \vb{B}                                     $, $\vb{B} \gets \alpha \vb{B} \op(\vb{A}^{-1})                                     $, $\op(\vb{A}) = \vb{A}, \vb{A}^{\T}, \vb{A}^{\H}$, $\vb{B} - m \times n$              & S, D, C, Z         \\
